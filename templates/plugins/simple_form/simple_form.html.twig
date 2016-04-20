@@ -1,0 +1,61 @@
+<form name="simple_form" id="form" action="https://getsimpleform.com/messages?form_api_token={{ token }}" enctype="multipart/form-data" method="post">
+  <div class="success_wrapper">
+    <div id="simple_form-success" class="success"></div>
+  </div>
+
+  <fieldset>
+    <label class="name">
+      <input id="simple_form-field-name" name="simple_form-field-name" type="text" value="{{ fields.name.title }}:" />
+      <br class="clear">
+      <span class="error error-empty">*This is not a valid name.</span>
+      <span class="empty error-empty">*This field is required.</span>
+    </label>
+
+    <label class="email">
+      <input id="simple_form-field-email" name="simple_form-field-email" type="text" value="{{ fields.email.title }}:" />
+      <br class="clear">
+      <span class="error error-empty">*This is not a valid email address.</span>
+      <span class="empty error-empty">*This field is required.</span>
+    </label>
+
+    <label class="message">
+      <textarea id="simple_form-field-message" name="simple_form-field-message">{{ fields.message.title }}:</textarea>
+      <br class="clear">
+      <span class="error">*The message is too short.</span>
+      <span class="empty">*This field is required.</span>
+    </label>
+
+    <div class="clear"></div>
+
+    <div class="btns">
+      <button id="simple_form-field-submit" name="simple_form-field-submit" type="submit" class="link1">{{ fields.submit.title }}</button>
+
+      <div class="clear"></div>
+    </div>
+  </fieldset>
+</form>
+
+<script>
+  $(function() {
+    $('#form').submit(function() {
+      $.ajax({
+        dataType: 'jsonp',
+        url: "http://getsimpleform.com/messages/ajax?form_api_token={{ token }}",
+        data: {
+          {% for key, field in fields if field.type != 'submit' %}
+          {{ key }}: $("#simple_form-field-{{ key }}").val(),
+          {% endfor %}
+        }
+      }).done(function() {
+        $('#simple_form-success').append("{{ messages.success | raw }}");
+
+        $('#simple_form-success').show();
+
+        //clear all fields
+        $('#form').trigger("reset");
+      });
+
+      return false;
+    })
+  });
+</script>

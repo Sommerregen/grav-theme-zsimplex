@@ -1,0 +1,29 @@
+{% set collection = page.collection() %}
+
+{% block body_content %}
+  {% if collection | length %}
+    <div class="col-full">
+      <div class="wrap-col">
+        <div class="slider_wrapper">
+          <ul class="items">
+            {% for item in collection %}
+            <li>
+              <img src="{{ url('theme://assets/images/spacer.gif') }}" alt="" />
+              <div class="caption banner">
+                <h2>{{ item.title }}</h2>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="socials">
+          <a href="{{ theme_config.social_links.facebook }}"></a>
+          <a href="{{ theme_config.social_links.twitter }}"></a>
+          <a href="{{ theme_config.social_links.gplus }}"></a>
+          <a href="{{ theme_config.social_links.linkedin }}"></a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
