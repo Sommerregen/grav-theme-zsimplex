@@ -265,15 +265,12 @@
 .pagination  {
 	display: block;
 	position: absolute;
-	left: 50%;
 	bottom: 73px;
-	width: 178px;
+	width: 100%;
 	height: 32px;
-	margin-left: -89px;
 	overflow: hidden;
 	right: 0;
 	z-index: 999;
-	text-align: left;
 
 }
 
@@ -284,7 +281,7 @@
 }
 
 .pagination li {
-	float: left;
+	display: inline-block;
 }
 
 .pagination li+li {
