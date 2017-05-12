@@ -19,8 +19,8 @@
       {% endblock %}
 
       <link rel="canonical" href="{{ page.url(true) }}" />
-      <link rel="shortcut icon" href="{{ theme_url }}/assets/images/favicon.ico" />
-
+      <link rel="shortcut icon" href="{{ theme_config.favicon_url | default(url('theme://assets/images/favicon.ico')) }}" alt="{{ site.title | e('html_attr') }}"/>
+      
       {% block head_css %}
         {% do assets.add('theme://assets/css/style.css', 104) %}
         {% do assets.add('theme://assets/css/zerogrid.css', 103) %}
