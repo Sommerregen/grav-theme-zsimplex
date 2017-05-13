@@ -3,6 +3,9 @@ enabled: true
 # Logo URL
 logo_url: ""
 
+# Favicon
+favicon_url: ""
+
 # Contacts
 contacts:
 

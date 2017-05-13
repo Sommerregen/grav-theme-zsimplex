@@ -118,7 +118,3 @@
 	});
 
 })(jQuery);
-/*---------------------*/
-$(function(){
-	$('.sf-menu').superfish({autoArrows: true})
-})
