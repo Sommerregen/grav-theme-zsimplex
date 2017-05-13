@@ -1,34 +1,36 @@
 enabled: true
 
 # Logo URL
-logo_url: ""
+logo_url: "/user/images/logo.svg"
 
 # Favicon
-favicon_url: ""
+favicon_url: "/user/images/ts_favicon.png"
 
 # Contacts
 contacts:
 
   # Location
   location:
-    - "Via Romagnola"
-    - "524 - Roma Italy"
+    - "Christian Knoop"
+    - "Kai Stammnitz"
+    - "TestSolutions GmbH"
+    - "Georg- Voigt- Strasse 17"
+    - "60325 Frankfurt am Main"
 
   # Phone
-  phone: "+1 800 559 6580"
+  phone: "+49 (0) 69 / 945 08 031"
 
   # Email
-  email: "mail@demolink.org"
+  email: "info[at]testsolutions.de"
 
 # Social Links
 social_links:
     social0:
         name: xing
-        link: '#'
+        link: 'https://www.xing.com/companies/testsolutions'
     social1:
         name: linkedin
-        link: '#'
-
+        link: 'https://www.linkedin.com/in/christian-knoop-0a044b63'
 
 # Grav streams
 streams:
