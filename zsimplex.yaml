@@ -15,23 +15,20 @@ contacts:
     - "524 - Roma Italy"
 
   # Phone
-  phone:
-    freephone: "+1 800 559 6580"
-    telephone: "+1 800 603 6035"
-    fax: "+1 800 889 9898"
+  phone: "+1 800 559 6580"
 
   # Email
   email: "mail@demolink.org"
 
-  # Skype (not include @)
-  skype: "skypename"
-
 # Social Links
 social_links:
-  facebook: "#"
-  twitter: "#"
-  gplus: "#"
-  linkedin: "#"
+    social0:
+        name: xing
+        link: '#'
+    social1:
+        name: linkedin
+        link: '#'
+
 
 # Grav streams
 streams:

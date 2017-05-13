@@ -11,33 +11,26 @@
   </div>
 
   <div class="clear"></div>
-
   <div class="map">
     <div class="col-1-4">
       <div class="wrap-col">
-        <div class="text1">Address</div>
+       <div class="text1">Address</div>
         <address>
           <dl>
-            {% if theme_config.contacts.location %}
+            {% if grav.theme.config.contacts.location %}
               <dt>
-                {% for line in theme_config.contacts.location %}
+                {% for line in grav.theme.config.contacts.location %}
                   {{ line }}<br />
                 {% endfor %}
               </dt>
             {% endif %}
 
-            {% if theme_config.contacts.phone %}
-              {% for key, value in theme_config.contacts.phone %}
-                <dd><span>{{ key }}:</span>{{ value }}</dd>
-              {% endfor %}
+            {% if grav.theme.config.contacts.phone %}
+                <dd><span class="phone"><i class="fa fa-phone" aria-hidden="true"></i></span>{{  grav.theme.config.contacts.phone }}</dd>
             {% endif %}
 
-            {% if theme_config.contacts.email %}
-              <dd>E-mail: <a href="#" class="link-1">{{ theme_config.contacts.email }}</a></dd>
-            {% endif %}
-
-            {% if theme_config.contacts.skype %}
-              <dd>Skype: <a href="#" class="link-1">@{{ theme_config.contacts.skype }}</a></dd>
+            {% if grav.theme.config.contacts.email %}
+              <dd><span class="paperplane"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>{{ grav.theme.config.contacts.email }}</a></dd>
             {% endif %}
           </dl>
         </address>
@@ -45,21 +38,15 @@
     </div>
     <div class="col-1-4">
       <div class="wrap-col">
-        <div class="text1">&nbsp;</div>
-
-          {% if config.plugins.gmaps.enabled %}
-            {{ gmaps({ address: theme_config.contacts.location | join(' '), width: 220, height: 220, zoom: 10 }) }}
-          {% endif %}
-
+        <div class="text1 gmap"></div>
       </div>
     </div>
     <div class="col-2-4">
       <div class="wrap-col">
         <div class="text1">Ask a Question</div>
 
-        {% if config.plugins.simple_form.enabled %}
-          {% set simple_form_config = page.header.simple_form ?: theme_config.simple_form %}
-          {{ simple_form(simple_form_config) }}
+        {% if config.plugins.form.enabled %}
+          {% include "forms/form.html.twig" %}
         {% endif %}
       </div>
     </div>
