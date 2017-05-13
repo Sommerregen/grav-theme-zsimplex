@@ -22,6 +22,7 @@
       <link rel="shortcut icon" href="{{ theme_config.favicon_url | default(url('theme://assets/images/favicon.ico')) }}" alt="{{ site.title | e('html_attr') }}"/>
 
       {% block head_css %}
+        {% do assets.add('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 105) %}
         {% do assets.add('theme://assets/css/style.css', 104) %}
         {% do assets.add('theme://assets/css/zerogrid.css', 103) %}
         {% do assets.add('theme://assets/css/camera.css', 102) %}
@@ -120,61 +121,23 @@
     {% endblock %}
 
     {% block body_js %}
-      {#{% do assets.add('theme://assets/js/jquery.js', 109) %}#}
-      {% do assets.addJs('theme://assets/js/jquery-migrate-1.1.1.js', {'priority':108, 'group': 'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/superfish.js', {'priority': 107, 'group': 'bottom'}) %}
-      {#{% do assets.add('theme://assets/js/forms.js', 106) %}#}
-      {# {% do assets.add('theme://assets/js/jquery.ui.totop.js', 105) %} #}
-      {% do assets.addJs('theme://assets/js/jquery.equalheights.js', {'priority': 104, 'group': 'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/jquery.easing.1.3.js', {'priority': 103, 'group': 'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/jquery.ui.totop.js', {'priority': 102, 'group': 'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/tms-0.4.1.js', {'priority': 101, 'group': 'bottom'}) %}
-      {# create bug with gmaps #{% do assets.add('theme://assets/js/css3-mediaqueries.js', 100) %}#}
-
-      {{ assets.js('bottom') }}
-
+          {% do assets.addJs('jquery',110) %}
+          {% do assets.addJs('theme://assets/js/tms-0.4.1.js', 101) %}
+          {% do assets.addJs('theme://assets/js/jquery.ui.totop.js', 101)  %}
+          {% do assets.addJs('theme://assets/js/superfish.js', 102) %}
+          {% do assets.addJs('theme://assets/js/jquery-migrate-1.4.1.js', 109) %}
+          {% do assets.addJs('theme://assets/js/jquery.easing.js', 103) %}
+          {% do assets.addJs('theme://assets/js/jquery.equalheights.min.js', 104) %}
+      {{ assets.js() }}
       <script>
         function goToByScroll(id){
           $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
-        };
+        }
 
-        $(document).ready(function() {
+        $(document).ready(function(){
           $().UItoTop({ easingType: 'easeOutQuart' });
-          $('.sf-menu').superfish({autoArrows: true});
-
-          $(".maxheight").each(function(){
-            $(this).contents().wrapAll("<div class='box_inner'></div>");
-          });
-          $(".maxheight1").each(function(){
-            $(this).contents().wrapAll("<div class='box_inner'></div>");
-          });
-          $(".maxheight2").each(function(){
-            $(this).contents().wrapAll("<div class='box_inner'></div>");
-          });
-
-          var height_handler = function() {
-            if ($(window).width() > 767) {
-              $(".maxheight").equalHeights();
-            } else {
-              $(".maxheight").css({'height':'auto'});
-            }
-            if ($(window).width() > 767) {
-              $(".maxheight1").equalHeights();
-            } else {
-              $(".maxheight1").css({'height':'auto'});
-            }
-            if ($(window).width() > 767) {
-              $(".maxheight2").equalHeights();
-            } else {
-              $(".maxheight2").css({'height':'auto'});
-            }
-          };
-
-          $(window).bind("resize", height_handler)
-            .bind("load", height_handler);
         });
       </script>
-
     {% endblock %}
 
   </body>
