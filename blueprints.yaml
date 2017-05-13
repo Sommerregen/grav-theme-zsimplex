@@ -1,17 +1,16 @@
-name: zSimplex
-version: 2.0.2
-description: "zSimplex is a free responsive Html5 Theme can be used to start a website for Management and Project."
-icon: paint-brush
+name: "zSimplex"
+version: "2.0.2"
+description: "The zSimplex theme is a free responsive HTML5 theme that can be used to start a management or project website."
+icon: "paint-brush"
 author:
-  name: Sommerregen
-  email: sommerregen@benjamin-regler.de
-  url: benjamin-regler.de
-homepage: https://github.com/sommerregen/grav-theme-zsimplex
-demo: http://themes.benjamin-regler.de/zsimplex/
-keywords: [theme, onepage, responsive, html5, css3, jquery, simple_form, gmaps]
-docs: https://github.com/sommerregen/grav-theme-zsimplex/blob/master/README.md
-bugs: https://github.com/sommerregen/grav-theme-zsimplex/issues
-license: MIT/GPL
+  name: "Sommerregen"
+  email: "sommerregen@benjamin-regler.de"
+homepage: "https://github.com/sommerregen/grav-theme-zsimplex"
+demo: "https://themes.benjamin-regler.de/zsimplex"
+keywords: ["theme", "onepage", "responsive", "html5", "css3", "jquery", "simple_form", "gmaps"]
+docs: "https://github.com/sommerregen/grav-theme-zsimplex/blob/master/README.md"
+bugs: "https://github.com/sommerregen/grav-theme-zsimplex/issues"
+license: "MIT/GPL"
 
 form:
   validation: strict
