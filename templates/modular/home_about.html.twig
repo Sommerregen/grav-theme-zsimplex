@@ -23,11 +23,19 @@
 
             {{ item.header.subtitle }}
 
-            <div class="socials1">
-              <a href="{{ item.header.social_links.facebook }}"></a>
-              <a href="{{ item.header.social_links.twitter }}"></a>
-              <a href="{{ item.header.social_links.gplus }}"></a>
-              <a href="{{ item.header.social_links.linkedin }}"></a>
+            <div class="socials socials1">
+              <a class="fa-{{ item.header.social_links.social0.name }}" href="{{ item.header.social_links.social0.link }}">
+                <i class="fa fa-{{ item.header.social_links.social0.name }}" aria-hidden="true"></i>
+              </a>
+              <a class="fa-{{ item.header.social_links.social1.name }}" href="{{ item.header.social_links.social1.link }}">
+                <i class="fa fa-{{ item.header.social_links.social1.name }}" aria-hidden="true"></i>
+              </a>
+              <a class="fa-{{ item.header.social_links.social2.name }}" href="{{ item.header.social_links.social2.link }}">
+                <i class="fa fa-{{ item.header.social_links.social2.name }}" aria-hidden="true"></i>
+              </a>
+              <a class="fa-{{ item.header.social_links.social3.name }}" href="{{ item.header.social_links.social3.link }}">
+                <i class="fa fa-{{ item.header.social_links.social3.name }}" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
         </div>

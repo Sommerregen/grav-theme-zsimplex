@@ -5,10 +5,23 @@
 @import "../css/reset.css";
 @import "../css/superfish.css";
 
-input {
-	outline:  none !important;
+.form-field input,.form-field textarea {
+	font-size:18px;
+	padding:10px 10px 10px 5px;
+	display:block;
+	width:300px;
+	border:none;
+	border-bottom:1px solid #38a390;
 }
 
+.form-field input:focus,.form-field textarea:focus  {
+	border-width: 3px;
+}
+
+.form-field textarea:focus {
+	height: 150px;
+	width: 400px;
+}
 
 html {
 	width: 100%;
