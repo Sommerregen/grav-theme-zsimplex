@@ -1,5 +1,8 @@
 enabled: true
 
+# Load resources from cdn
+cdn: true
+
 # Logo URL
 logo_url: "/user/images/logo.svg"
 
