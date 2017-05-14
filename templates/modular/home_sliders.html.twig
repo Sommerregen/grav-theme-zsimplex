@@ -1,30 +1,30 @@
 {% set collection = page.collection() %}
 
 {% block body_content %}
-  {% if collection | length %}
-    <div class="col-full">
-      <div class="wrap-col">
-        <div class="slider_wrapper">
-          <ul class="items">
-            {% for item in collection %}
-            <li>
-              <img src="{{ url('theme://assets/images/spacer.gif') }}" alt="" />
-              <div class="caption banner slide_{{ loop.index0 }}">
-                <h2>{{ item.title }}</h2>
-              </div>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
+    {% if collection | length %}
+        <div class="col-full">
+            <div class="wrap-col">
+                <div class="slider_wrapper">
+                    <ul class="items">
+                        {% for item in collection %}
+                            <li>
+                                <img src="{{ url('theme://assets/images/spacer.gif') }}" alt=""/>
+                                <div class="caption banner slide_{{ loop.index0 }}">
+                                    <h2>{{ item.title }}</h2>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
 
-        <div class="socials">
-            {% for element in grav.theme.config.social_links %}
-              <a class="fa-{{ element.name }}" href="{{ element.link }}">
-                <i class="fa fa-{{ element.name }}" aria-hidden="true"></i>
-              </a>
-            {% endfor %}
+                <div class="socials">
+                    {% for element in grav.theme.config.social_links %}
+                        <a class="fa-{{ element.name }}" href="{{ element.link }}">
+                            <i class="fa fa-{{ element.name }}" aria-hidden="true"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  {% endif %}
+    {% endif %}
 {% endblock %}

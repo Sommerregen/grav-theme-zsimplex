@@ -118,7 +118,7 @@
                 <div class="wrap-col">
                     <div class="copy">
                         <a href="{{ base_url }}">{{ site.title }}</a> &copy; {{ "NOW" | date('Y') }}
-                        {% for element in page.header.footer %} |   <a href="{{element.link}}">{{element.name}}</a>
+                        {% for element in page.header.footer %}&emsp;|&emsp;<a href="{{ element.link }}">{{ element.name }}</a>&emsp;
                         {% endfor %}
                     </div>
                 </div>
