@@ -117,16 +117,15 @@
             <div class="col-full">
                 <div class="wrap-col">
                     <div class="copy">
-                        <a href="{{ base_url }}">{{ site.title }}</a>  &copy; {{ "NOW" | date('Y') }} | <a href="#">Privacy Policy</a>
+                        <a href="{{ base_url }}">{{ site.title }}</a> &copy; {{ "NOW" | date('Y') }}
+                        {% for element in page.header.footer %} |   <a href="{{element.link}}">{{element.name}}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
 
             <div class="clear"></div>
         </div>
-
-        <!---->
-
     </footer>
 {% endblock %}
 

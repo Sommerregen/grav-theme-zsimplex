@@ -24,18 +24,11 @@
             {{ item.header.subtitle }}
 
             <div class="socials socials1">
-              <a class="fa-{{ item.header.social_links.social0.name }}" href="{{ item.header.social_links.social0.link }}">
-                <i class="fa fa-{{ item.header.social_links.social0.name }}" aria-hidden="true"></i>
-              </a>
-              <a class="fa-{{ item.header.social_links.social1.name }}" href="{{ item.header.social_links.social1.link }}">
-                <i class="fa fa-{{ item.header.social_links.social1.name }}" aria-hidden="true"></i>
-              </a>
-              <a class="fa-{{ item.header.social_links.social2.name }}" href="{{ item.header.social_links.social2.link }}">
-                <i class="fa fa-{{ item.header.social_links.social2.name }}" aria-hidden="true"></i>
-              </a>
-              <a class="fa-{{ item.header.social_links.social3.name }}" href="{{ item.header.social_links.social3.link }}">
-                <i class="fa fa-{{ item.header.social_links.social3.name }}" aria-hidden="true"></i>
-              </a>
+                {% for element in item.header.social_links %}
+                  <a class="fa-{{ element.name }}" href="{{ element.link }}">
+                    <i class="fa fa-{{ element.name }}" aria-hidden="true"></i>
+                  </a>
+                {% endfor %}
             </div>
           </div>
         </div>
