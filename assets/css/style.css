@@ -124,6 +124,7 @@ h3 {
 
 p {
 	margin-bottom: 19px;
+    line-height: 145%;
 }
 
 img {
@@ -412,17 +413,28 @@ header.page5 .hover {
 	line-height: 0;
 }
 
+.socials .fa {
+    color: #5383C6;
+    width: 40px;
+    font-size: 40px;
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 2px solid #5383C6;
+}
+
+
+
+.socials .fa- {
+    display: none;
+}
+
 .socials a {
 	display: inline-block;
 	font-size: 0;
 	line-height: 0;
 	width: 69px;
 	height: 69px;
-	background: url(../images/socials.png) 0 0 no-repeat;
-}
-
-.socials a:hover {
-	opacity: 0.5;
+	background: 0 0 no-repeat;
 }
 
 .socials a+a {
@@ -450,12 +462,14 @@ header.page5 .hover {
 	padding: 23px 0 24px;
 	border-top-width: 4px;
 	border-bottom-width: 4px;
+    min-width: 180px;
 }
 
 .box img {
 	border: 3px solid #f4948b;
 	border-radius: 500px;
 	margin-bottom: 19px;
+    max-width: 160px;
 }
 
 .box .text1 {
@@ -483,7 +497,7 @@ header.page5 .hover {
 	line-height: 0;
 	width: 31px;
 	height: 31px;
-	background: url(../images/soc1.png) 0 0 no-repeat;
+	background: 0 0 no-repeat;
 }
 
 .socials1 a:hover {
@@ -512,7 +526,24 @@ header.page5 .hover {
 	color: #fff;
 	background-color: #46dcc7;
 	border-color: #99d6cb;
-	padding: 22px 15px 27px;
+	/*padding: 22px 15px 27px;*/
+}
+
+#page3 .box p {
+    margin: 10px;
+}
+
+#page3 .box p {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    word-wrap: normal;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-overflow: ellipsis;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #page3 .box img {
@@ -546,7 +577,7 @@ header.page5 .hover {
 	display: inline-block;
 	color: #b288ab;
 	padding-right: 12px;
-	background: url(../images/link_marker.png) right 4px no-repeat;
+	background: right 4px no-repeat;
 	margin-top: 14px;
 }
 

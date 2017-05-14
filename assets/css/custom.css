@@ -7,9 +7,6 @@ Mint: #38a390
 Tuerkis: #2EADCA
 **/
 
-p {
-    line-height: 145%;
-}
 
 .caption {
   position: inherit;
@@ -20,7 +17,7 @@ Navigation
 **/
 header h1 a {
 	width: 302px;
-  height: 50px;
+    height: 50px;
 }
 
 header {
@@ -67,32 +64,15 @@ body {
   border-color: #fff transparent transparent transparent;
 }
 
-.socials .fa {
-  color: #5383C6;
-  width: 40px;
-  font-size: 40px;
-  padding: 8px 10px;
-  border-radius: 50%;
-  border: 2px solid #5383C6;
-}
-
 .socials1 .fa {
-  width: 20px;
-  font-size: 20px;
-  padding: 8px 10px 8px 10px;
+    width: 20px;
+    font-size: 20px;
+    padding: 8px 10px 8px 10px;
 }
-
-.socials .fa- {
-  display: none;
-}
-
+/*
 .socials a, .socials1 a {
   background-image: none;
-}
-
-.socials a:hover {
-  opacity: initial;
-}
+}*/
 
 #page1 .socials i:hover {
     color: #38a390;
@@ -156,19 +136,19 @@ header.page2 {
 
 #page2 .box {
     background-color: transparent;
-    border: 3px solid #2aae96;
+    border: 3px solid #85D171;
     padding: 23px 0 24px;
     border-top-width: 4px;
     border-bottom-width: 4px;
 }
 
 #page2 .box img {
-    border: 3px solid #2aae96;
+    border: 3px solid #85D171;
 }
 
 #page2 .socials .fa {
-  color: #2aae96;
-  border: 2px solid #2aae96;
+  color: #85D171;
+  border: 2px solid #85D171;
 }
 
 #page2 h3 em {
@@ -185,6 +165,7 @@ header.page2 {
 
 #page2 .socials1 {
   min-height: 32px;
+    border-color: #85D171;
 }
 
 #page3 .box {
