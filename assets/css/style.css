@@ -457,6 +457,10 @@ header.page5 .hover {
     min-width: 180px;
 }
 
+.box a {
+    font-size: x-large;
+}
+
 .box img {
     border: 3px solid #f4948b;
     border-radius: 500px;
@@ -576,11 +580,13 @@ header.page5 .hover {
     background-color: #fff;
     height: 90px;
     position: relative;
+    filter: grayscale(80%);
 }
 
 .companies .text1 {
     margin-bottom: 9px;
     margin-top: 20px;
+    height: 38px;
 }
 
 .companies a {
