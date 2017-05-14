@@ -7,61 +7,63 @@ Mint: #38a390
 Tuerkis: #2EADCA
 **/
 
-
 .caption {
-  position: inherit;
+    position: inherit;
 }
 
 /**
 Navigation
 **/
 header h1 a {
-	width: 302px;
+    width: 302px;
     height: 50px;
+    max-width: 100%;
 }
 
 header {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 header h1 {
     padding-top: 20px;
+    max-width: 30%;
 }
 
-.page1 .sf-menu li>a {
-  color: #000;
+.page1 .sf-menu li > a {
+    color: #000;
 }
 
 .page1 .sf-menu .men a {
-  color: #fff;
+    color: #fff;
 }
 
 .page6 .sf-menu .men5 a {
-  color: #fff;
-}
-.page6 .sf-menu li>a {
-  color: #000;
+    color: #fff;
 }
 
-.sf-menu>li .hover {
-  background-color: #5383C6;
+.page6 .sf-menu li > a {
+    color: #000;
 }
 
-.sf-menu>li>a {
-  color: #fff;
-  padding-bottom: 10px;
+.sf-menu > li .hover {
+    background-color: #5383C6;
 }
 
-.sf-menu>li>a:hover {
-  color: #fff;
+.sf-menu > li > a {
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.sf-menu > li > a:hover {
+    color: #fff;
 }
 
 body {
-  background: #fff;
+    background: #fff;
 }
 
 .content:after {
-  border-color: #fff transparent transparent transparent;
+    border-color: #fff transparent transparent transparent;
 }
 
 .socials1 .fa {
@@ -69,6 +71,7 @@ body {
     font-size: 20px;
     padding: 8px 10px 8px 10px;
 }
+
 /*
 .socials a, .socials1 a {
   background-image: none;
@@ -82,48 +85,24 @@ body {
     color: #334960;
 }
 
-#page1 .caption.banner h2 {
-  margin-top: 101px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
-
 #page1 .caption.banner.slide_0 h2 {
-  background-color: #5383C6;
+    background-color: #5383C6;
 }
 
 #page1 .caption.banner.slide_1 h2 {
-  background-color: rgb(143, 197, 122);
+    background-color: rgb(143, 197, 122);
 }
 
 #page1 .caption.banner.slide_2 h2 {
-  background-color: #32ac97;
+    background-color: #32ac97;
 }
 
 #page1 .caption.banner.slide_3 h2 {
-  background-color: #334960;
-}
-
-#page1 .pagination {
-  height: auto;
-  bottom: 0px;
-}
-
-#page1 .pagination li a {
-  width: 32px;
-  font-size: 32px;
-  border-radius: 50%;
-  border: 2px solid #38a390;
-  background: #38a390 none;
-}
-
-#page1 .pagination li a:hover {
-  background-color: #5383C6;
-  border-color: #5383C6;
+    background-color: #334960;
 }
 
 header.page2 {
-  background-color: #629dea;
+    background-color: #629dea;
 }
 
 #page2 {
@@ -147,79 +126,33 @@ header.page2 {
 }
 
 #page2 .socials .fa {
-  color: #85D171;
-  border: 2px solid #85D171;
+    color: #85D171;
+    border: 2px solid #85D171;
 }
 
 #page2 h3 em {
-  background-color: #2aae96;
+    background-color: #2aae96;
 }
 
 #page2 .zerogrid .col-1-4 {
-  float: inherit;
+    float: inherit;
 }
 
 #page2 .socials1 a {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 #page2 .socials1 {
-  min-height: 32px;
+    min-height: 32px;
     border-color: #85D171;
 }
 
 #page3 .box {
-  background-color: #38a390;
-}
-
-#page3 .box .services .fa {
-  width: 60px;
-  font-size: 60px;
-  padding: 28px 30px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-#page3 .box .text1 {
-  padding-top: 15px;
+    background-color: #38a390;
 }
 
 #page3 .box.maxheight1 {
-  height: 380px;
-}
-
-.companies .company_image {
-  background-color: #fff;
-  margin-bottom: auto;
-}
-
-@media only screen and (max-width: 420px){
-  .companies {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.companies img {
-    margin-bottom: inherit;
-}
-
-.companies .text1 {
-      margin-top: 20px;
-}
-
-.companies .clear {
-    height: 35px;
-}
-
-.companies a {
-  background: initial;
-}
-
-.companies .fa {
-  font-size: large;
-  margin-left: 5px;
+    height: 380px;
 }
 
 header.page4 {
@@ -227,95 +160,51 @@ header.page4 {
 }
 
 #page4 {
-  background-color: #334960;
+    background-color: #334960;
 }
 
 #page4 .companies a {
-  color: #3f9fc9;
+    color: #3f9fc9;
 }
 
 #page4 .companies a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 #page5::after {
-  border-color: #334960 transparent transparent transparent;
+    border-color: #334960 transparent transparent transparent;
 }
 
 #page5 h3 {
-  margin-bottom: 108px;
+    margin-bottom: 108px;
 }
 
 #page5 .companies a {
-  color: #334960
+    color: #334960
 }
 
 #page5 .companies a:hover {
-  color: #fff
+    color: #fff
 }
 
 #page6::after {
-  border-color: #3f9fc9 transparent transparent transparent;
+    border-color: #3f9fc9 transparent transparent transparent;
 }
 
 #page6 h3 {
-  background-color: #3f9fc9;
-  display: inline;
+    background-color: #3f9fc9;
+    display: inline;
 }
 
 #page6 p {
-  margin-top: 108px;
-  color: #334960;
+    margin-top: 108px;
+    color: #334960;
 }
 
 #page6 .map {
-  color: #334960;
-}
-
-#page6 .map .text1 {
-  background-color: #2aae96;
-  display: inline;
-  padding: 2px 5px;
-}
-
-#page6 .map .text1.gmap {
-  background-color: transparent;
-}
-
-#page6 .map address {
-  margin-top: 20px;
-}
-
-#page6 .map dl, form {
-  font-size: 17px;
-  line-height: 145%;
-}
-
-#page6 .phone {
-    width: 20px;
-    min-width: initial;
-}
-
-#page6 .paperplane {
-  width: 23px;
-  min-width: initial;
-}
-
-#page6 .map form {
-  margin-top: 23px;
+    color: #334960;
 }
 
 header.page6 .men5 .hover {
     top: 0;
-}
-
-#page6 .zerogrid .col-1-8 {
-    width: 12.5%;
-    float: left;
-    display: inline-block;
-}
-#page6 .zerogrid .col-3-8 {
-    width: 37.5%;
-    float: left;
-    display: inline-block;
 }
