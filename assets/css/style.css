@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
     font-size: 60px;
     padding-top: 101px;
-    line-height: 60px;
+    line-height: normal;
     text-align: center;
 }
 
@@ -574,14 +574,6 @@ header.page5 .hover {
     margin-bottom: auto;
 }
 
-@media only screen and (max-width: 420px) {
-    .companies {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .companies .text1 {
     margin-bottom: 9px;
     margin-top: 20px;
@@ -683,19 +675,16 @@ address dt {
 }
 
 address dd span {
-    min-width: 85px;
     display: inline-block;
     text-align: left;
 }
 
-.phone {
-    width: 20px;
-    min-width: initial;
+address dd span i {
+    margin-right: 5px;
 }
 
-.paperplane {
-    width: 23px;
-    min-width: initial;
+.paper-plane {
+    width: 21px;
 }
 
 /************Footer***********/
@@ -715,8 +704,8 @@ footer a:hover {
     color: #e0e8ec;
     padding-top: 29px;
     padding-bottom: 30px;
-    font-size: 12px;
     line-height: 24px;
+    text-align: center;
 }
 
 /**to top**/

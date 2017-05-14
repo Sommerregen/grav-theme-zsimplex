@@ -17,11 +17,13 @@ contacts:
     - "Georg- Voigt- Strasse 17"
     - "60325 Frankfurt am Main"
 
-  # Phone
-  phone: "+49 (0) 69 / 945 08 031"
-
-  # Email
-  email: "info[at]testsolutions.de"
+  other:
+    phone:
+      fa: phone
+      content: "+49 (0) 69 / 945 08 031"
+    email:
+      fa: paper-plane
+      content: "info[at]testsolutions.de"
 
 # Social Links
 social_links:
