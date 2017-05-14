@@ -223,14 +223,14 @@ footer .copy {
 
 #jobs h3 {
     background-color: #3c7f9f;
-    margin-left: 10px;
-    left: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: inline-block;
 }
 
 #jobs .text1 {
     padding-top: 80px;
     color: #3c7f9f;
+}
+
+#jobs .text1.formhead {
+    padding-top: 0;
+    color: #fff;
 }

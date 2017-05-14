@@ -1,0 +1,34 @@
+{% embed 'default.html.twig' %}
+
+    {% set collection = page.collection() %}
+
+
+
+    {% block body_content %}
+        {% set blog_image = page.media.images|first %}
+        <div id="{{ page.slug }}" class="content {% if blog_image %}jobs{% endif %}">
+            <div class="zerogrid {% if blog_image %}jobs{% endif %}">
+                <div class="col-full">
+                    <div class="wrap-col">
+                        {% if blog_image %}
+                        <div class="flush-top jobs-header-image"
+                             style="background-image: url({{ blog_image.url }});">{% endif %}
+                            <h3>{{ page.title }}</h3>
+                            {% if blog_image %}</div>{% endif %}
+                        <div class="text1">
+                            {{ page.content }}
+                            <div class="text1 formhead">{{ page.header.form.contactstring }}</div>
+                            {% if config.plugins.form.enabled %}
+                                {% include "forms/form.html.twig" %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        -->
+    {% endblock %}
+
+{% endembed %}
+

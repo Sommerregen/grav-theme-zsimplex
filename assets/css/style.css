@@ -730,3 +730,71 @@ footer a:hover {
 #toTop:hover {
     background-position: right 0;
 }
+
+/**
+jobs
+ */
+.zerogrid.jobs {
+    width: 100%
+}
+
+.jobs-header-image {
+    height: 410px;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+}
+
+.jobs-header-image h3 {
+    top: 100%;
+    position: relative;
+    width: 100%;
+}
+.jobs .zerogrid .wrap-col {
+    margin: 0;
+}
+
+.content.jobs  {
+    padding-top: 73px;
+}
+
+.content.jobs li:before {
+    font-family: 'FontAwesome';
+    content: '\f18e';
+    margin:0 5px 0 0;
+}
+
+.content.jobs li {
+    line-height: 175%;
+}
+
+.content.jobs ul {
+    padding-bottom: 50px;
+}
+
+.content.jobs .text1 {
+    text-align: left;
+}
+
+.zerogrid.jobs .text1 {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+    .zerogrid.jobs .text1 {
+        width: 768px;
+    }
+}
+
+.jobs .text1.formhead {
+    color: #fff;
+    background-color: #2aae96;
+    display: inline;
+    padding: 2px 5px;
+    padding-top: 0;
+}
+
+.jobs form {
+    padding-top: 25px;
+}

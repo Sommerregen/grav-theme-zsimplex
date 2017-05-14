@@ -30,12 +30,12 @@ contacts:
 
 # Social Links
 social_links:
-    social0:
-        name: xing
+    xing:
+        fa: xing
         link: 'https://www.xing.com/companies/testsolutions'
-    social1:
-        name: linkedin
-        link: 'https://www.linkedin.com/in/christian-knoop-0a044b63'
+    linkedin:
+        fa: linkedin
+        link: 'https://business.linkedin.com/marketing-solutions/company-pages'
 
 # Grav streams
 streams:
