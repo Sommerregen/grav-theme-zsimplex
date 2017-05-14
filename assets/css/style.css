@@ -5,6 +5,10 @@
 @import "../css/reset.css";
 @import "../css/superfish.css";
 
+/**
+Styles the grav form in a material manner. No fancy effects though (easing etcpp.)
+ */
+
 .form-field input,.form-field textarea {
 	font-size:18px;
 	padding:10px 10px 10px 5px;
@@ -15,13 +19,56 @@
 }
 
 .form-field input:focus,.form-field textarea:focus  {
-	border-width: 3px;
+	border: none;
+	border-bottom:3px solid #38a390;
+
 }
 
 .form-field textarea:focus {
 	height: 150px;
 	width: 400px;
 }
+
+#contact > div.buttons {
+	padding-top: 15px;
+}
+
+#contact > div.buttons > button {
+	vertical-align: middle;
+	color: #fff;
+	text-align: center;
+	letter-spacing: .5px;
+	font-size: 1rem;
+	outline: 0;
+	border-radius: 2px;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 2rem;
+	text-transform: uppercase;
+	border: 2px solid #5383C6;
+
+}
+
+#contact > div.buttons > button:nth-child(1) {
+	background-color: #5383C6;
+}
+
+#contact > div.buttons > button:nth-child(1):hover {
+	background-color: transparent;
+	color: #334960;
+	border-color: #334960;
+}
+
+#contact > div.buttons > button:nth-child(2) {
+	background-color: transparent;
+	color: #5383C6;
+}
+
+#contact > div.buttons > button:nth-child(2):hover {
+	color: #334960;
+	border-color: #334960;
+}
+
 
 html {
 	width: 100%;
