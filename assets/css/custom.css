@@ -22,6 +22,11 @@ header h1 a {
 
 header {
     background-color: #fff;
+    padding-bottom: 0;
+}
+
+header.page4 .hover {
+    background-color: #629DEA;
 }
 
 header h1 {
@@ -29,33 +34,16 @@ header h1 {
     max-width: 30%;
 }
 
-.page1 .sf-menu li > a {
-    color: #000;
+header .sf-menu a {
+    color: #334960;
 }
 
-.page1 .sf-menu .men a {
+header .sf-menu a:hover {
     color: #fff;
 }
 
-.page6 .sf-menu .men5 a {
-    color: #fff;
-}
-
-.page6 .sf-menu li > a {
-    color: #000;
-}
-
-.sf-menu > li .hover {
-    background-color: #5383C6;
-}
-
-.sf-menu > li > a {
-    color: #fff;
-    padding-bottom: 10px;
-}
-
-.sf-menu > li > a:hover {
-    color: #fff;
+.page2 .sf-menu a, .page3 .sf-menu a, .page4 .sf-menu a, .page5 .sf-menu a {
+    color: #fff
 }
 
 body {
@@ -72,17 +60,29 @@ body {
     padding: 8px 10px 8px 10px;
 }
 
-/*
-.socials a, .socials1 a {
-  background-image: none;
-}*/
-
-#page1 .socials i:hover {
-    color: #38a390;
+#page1 .socials i:hover{
+    color: #2AAE96;
 }
 
 #page2 .socials1 i:hover {
     color: #334960;
+}
+
+.socials1 a:hover {
+    opacity: 1;
+}
+
+.page1 .men a, .page6 .men5 a {
+    color: #fff;
+}
+
+.page3 .men2 a {
+    color: #334960;
+}
+
+#page3 .slogan h3 {
+    background-color: #629DEA;
+    display: inline-block;
 }
 
 #page1 .caption h2 {
@@ -139,7 +139,8 @@ header.page2 {
 }
 
 #page2 h3 em {
-    background-color: #2aae96;
+    background-color: #334960;
+    margin-top: 5px;
 }
 
 #page2 .zerogrid .col-1-4 {
@@ -156,7 +157,12 @@ header.page2 {
 }
 
 #page3 .box {
-    background-color: #38a390;
+    background-color: #629DEA;
+}
+
+#page3 .box p {
+    font-size: medium;
+    margin: 20px;
 }
 
 #page3 .box.maxheight1 {
@@ -194,6 +200,8 @@ header.page4 {
 #page5 .companies a:hover {
     color: #fff
 }
+
+
 
 #page6::after {
     border-color: #3f9fc9 transparent transparent transparent;
@@ -233,4 +241,21 @@ footer .copy {
 #jobs .text1.formhead {
     padding-top: 0;
     color: #fff;
+}
+
+@media only screen and (max-width: 420px) {
+    header h1 {
+        padding-top: 0;
+        max-width: 40px;
+    }
+
+    header .wrap-col h1 a {
+        max-width: 30px;
+    }
+
+    header h1 a img {
+        position: absolute;
+        clip: rect(0, 49px, 27px, 0);
+        height: 27px;
+    }
 }
