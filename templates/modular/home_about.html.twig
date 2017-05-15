@@ -22,14 +22,15 @@
                         <div class="text1"><a href="#">{{ item.title }}</a></div>
 
                         {{ item.header.subtitle }}
-
-                        <div class="socials socials1">
-                            {% for element in item.header.social_links %}
-                                <a class="fa-{{ element.name }}" href="{{ element.link }}">
-                                    <i class="fa fa-{{ element.name }}" aria-hidden="true"></i>
-                                </a>
-                            {% endfor %}
-                        </div>
+                        {% if item.header.social_links %}
+                            <div class="socials socials1">
+                                {% for element in item.header.social_links %}
+                                    <a class="fa-{{ element.name }}" href="{{ element.link }}">
+                                        <i class="fa fa-{{ element.name }}" aria-hidden="true"></i>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
