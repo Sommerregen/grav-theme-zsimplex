@@ -569,11 +569,12 @@ header.page5 .hover {
 }
 
 .companies img {
-    width: 90%;
+    max-width: 90%;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    max-height: 70%;
 }
 
 .companies .company_image {
@@ -731,10 +732,26 @@ footer a:hover {
     border: none;
     text-indent: -999px;
     z-index: 999;
-    background: url(../images/totop.png) no-repeat left top;
     transition: 0s ease;
     -webkit-transition: 0s ease;
     -o-transition: 0s ease;
+    margin-left: 10px;
+}
+#toTop span {
+    opacity: 1 !important;
+}
+#toTop span:before {
+    opacity: 1 !important;
+    position: absolute;
+    /* padding-left: 20px; */
+    font-family: FontAwesome;
+    font-size: 52px;
+    content: "\f01b";
+    text-indent: initial;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 13px;
 }
 
 #toTop:hover {
@@ -801,4 +818,8 @@ jobs
 
 .jobs form {
     padding-top: 25px;
+}
+
+.jobs p {
+    margin-top: 50px;
 }

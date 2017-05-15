@@ -2,8 +2,6 @@
 
     {% set collection = page.collection() %}
 
-
-
     {% block body_content %}
         {% set blog_image = page.media.images|first %}
         <div id="{{ page.slug }}" class="content {% if blog_image %}jobs{% endif %}">
@@ -26,8 +24,6 @@
                 </div>
             </div>
         </div>
-
-        -->
     {% endblock %}
 
 {% endembed %}
