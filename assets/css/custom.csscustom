@@ -46,12 +46,6 @@ body {
     border-color: #fff transparent transparent transparent;
 }
 
-.socials1 .fa {
-    font-size: 20px;
-    padding: 8px 10px 8px 10px;
-    width: 20px;
-}
-
 #page1 .socials i:hover {
     color: #2AAE96;
 }
@@ -64,7 +58,7 @@ body {
     opacity: 1;
 }
 
-.page1 .men a, .page6 .men5 a, .page3 .men2 a {
+.page1 .men a, .page6 .men5 a {
     color: #fff;
 }
 
@@ -129,10 +123,6 @@ header.page2 {
 
 #page2 .zerogrid .col-1-4 {
     float: inherit;
-}
-
-#page2 .socials1 a {
-    padding-right: 10px;
 }
 
 #page2 .socials1 {

@@ -4,39 +4,43 @@ enabled: true
 cdn: true
 
 # Logo URL
-logo_url: "/user/images/logo.svg"
+logo_url: ""
 
 # Favicon
-favicon_url: "/user/images/ts_favicon.png"
+favicon_url: ""
+
+# Language switcher in the footer on/off (you'll need the plugin..)
+language_switcher: true
 
 # Contacts
 contacts:
-
   # Location
   location:
-    - "Christian Knoop"
-    - "Kai Stammnitz"
-    - "TestSolutions GmbH"
-    - "Georg- Voigt- Strasse 17"
-    - "60325 Frankfurt am Main"
+    - "Peter Pan"
+    - "Phantasyroad 5"
+    - "Phantasyland"
 
   other:
     phone:
       fa: phone
-      content: "+49 (0) 69 / 945 08 031"
+      content: "+49 (0) 69 / 232 658 78"
     email:
       fa: paper-plane
-      content: "info[at]testsolutions.de"
+      content: "info[at]peterpan.de"
 
 # Social Links
 social_links:
     xing:
         fa: xing
-        link: 'https://www.xing.com/companies/testsolutions'
+        link: 'https://www.xing.com/xbp'
     linkedin:
         fa: linkedin
         link: 'https://business.linkedin.com/marketing-solutions/company-pages'
-
+        linkedin:
+                fa: linkedin
+    facebook:
+            fa: facebook
+            link: 'https://facebook.com'
 # Grav streams
 streams:
   schemes:

@@ -416,6 +416,12 @@ header.page5 .hover {
     border: 2px solid #5383C6;
 }
 
+.box.maxheight .socials1 .fa {
+    font-size: 20px;
+    padding: 8px 10px 8px 10px;
+    width: 20px;
+}
+
 .socials .fa- {
     display: none;
 }
@@ -436,7 +442,6 @@ header.page5 .hover {
 
 .socials a + a + a {
     background-position: -175px 0;
-    margin-left: 19px;
 }
 
 .socials a + a + a + a {
@@ -500,6 +505,7 @@ header.page5 .hover {
     width: 31px;
     height: 31px;
     background: 0 0 no-repeat;
+    padding-right: 10px;
 }
 
 .socials1 a:hover {
@@ -822,4 +828,8 @@ jobs
 
 .jobs p {
     margin-top: 50px;
+}
+
+.langswitcher {
+    margin-top: 20px;
 }

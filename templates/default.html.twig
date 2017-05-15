@@ -125,11 +125,13 @@
                         {% for element in page.header.footer %}&emsp;|&emsp;<a
                                 href="{{ element.link }}">{{ element.name }}</a>&emsp;
                         {% endfor %}
+                        </br>
+                        {% if grav.theme.config.language_switcher %}
+                            {% include 'langswitcher.html.twig' %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
-
-            <div class="clear"></div>
         </div>
     </footer>
 {% endblock %}

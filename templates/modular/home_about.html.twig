@@ -25,8 +25,8 @@
                         {% if item.header.social_links %}
                             <div class="socials socials1">
                                 {% for element in item.header.social_links %}
-                                    <a class="fa-{{ element.name }}" href="{{ element.link }}">
-                                        <i class="fa fa-{{ element.name }}" aria-hidden="true"></i>
+                                    <a class="fa-{{ element.fa }}" href="{{ element.link }}" target="_blank">
+                                        <i class="fa fa-{{ element.fa }}" aria-hidden="true"></i>
                                     </a>
                                 {% endfor %}
                             </div>
