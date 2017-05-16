@@ -39,33 +39,26 @@ Styles the grav form in a material manner. No fancy effects though (easing etcpp
     letter-spacing: .5px;
     font-size: 1rem;
     outline: 0;
-    border-radius: 2px;
     height: 36px;
     line-height: 36px;
     padding: 0 2rem;
     text-transform: uppercase;
     border: 2px solid #5383C6;
-
+    cursor: pointer;
 }
 
 #contact > div.buttons > button:nth-child(1) {
     background-color: #5383C6;
 }
 
-#contact > div.buttons > button:nth-child(1):hover {
-    background-color: transparent;
-    color: #334960;
-    border-color: #334960;
+#contact > div.buttons > button:nth-child(1):hover, #contact > div.buttons > button:nth-child(2):hover {
+    background-color: #c2e8f4;
+    border-color: #3c7f9f;
+    color: #39596e;
 }
 
 #contact > div.buttons > button:nth-child(2) {
-    background-color: transparent;
     color: #5383C6;
-}
-
-#contact > div.buttons > button:nth-child(2):hover {
-    color: #334960;
-    border-color: #334960;
 }
 
 html {
