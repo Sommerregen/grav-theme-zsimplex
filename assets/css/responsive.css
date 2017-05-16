@@ -52,6 +52,10 @@ img {
     h1 {
         padding-top: 68px;
     }
+
+    .map {
+        height: 800px;
+    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -80,4 +84,5 @@ img {
         line-height: normal;
         margin-top: 0;
     }
+
 }

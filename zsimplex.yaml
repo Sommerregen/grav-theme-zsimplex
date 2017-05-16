@@ -12,6 +12,9 @@ favicon_url: ""
 # Language switcher in the footer on/off (you'll need the plugin..)
 language_switcher: true
 
+#Set your google api key here to enable the google map in contacts
+google_api_key: ''
+
 # Grav streams
 streams:
   schemes:
