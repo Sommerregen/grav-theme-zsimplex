@@ -12,19 +12,6 @@ favicon_url: ""
 # Language switcher in the footer on/off (you'll need the plugin..)
 language_switcher: true
 
-# Social Links
-social_links:
-    xing:
-        fa: xing
-        link: 'https://www.xing.com/xbp'
-    linkedin:
-        fa: linkedin
-        link: 'https://business.linkedin.com/marketing-solutions/company-pages'
-        linkedin:
-                fa: linkedin
-    facebook:
-            fa: facebook
-            link: 'https://facebook.com'
 # Grav streams
 streams:
   schemes:
