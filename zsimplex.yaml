@@ -12,22 +12,6 @@ favicon_url: ""
 # Language switcher in the footer on/off (you'll need the plugin..)
 language_switcher: true
 
-# Contacts
-contacts:
-  # Location
-  location:
-    - "Peter Pan"
-    - "Phantasyroad 5"
-    - "Phantasyland"
-
-  other:
-    phone:
-      fa: phone
-      content: "+49 (0) 69 / 232 658 78"
-    email:
-      fa: paper-plane
-      content: "info[at]peterpan.de"
-
 # Social Links
 social_links:
     xing:

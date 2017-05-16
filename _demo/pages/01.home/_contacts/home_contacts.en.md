@@ -1,8 +1,19 @@
 ---
 title: 'Get in Touch'
 menu: Contacts
+addressstring: Address
+address:
+    - "Peter Pan"
+    - "Phantasyroad 5"
+    - "Phantasyland"
+other:
+    phone:
+      fa: phone
+      content: "+49 (0) 69 / 232 658 78"
+    email:
+      fa: paper-plane
+      content: "info[at]peterpan.de"
 form:
-    addressstring: Address
     name: contact
     fields:
         -

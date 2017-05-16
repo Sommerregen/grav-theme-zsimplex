@@ -14,17 +14,17 @@
     <div class="map">
         <div class="col-3-8">
             <div class="wrap-col">
-                <div class="text1">{{ page.header.form.addressstring }}</div>
+                <div class="text1">{{ page.header.addressstring }}</div>
                 <address>
                     <dl>
-                        {% if grav.theme.config.contacts.location %}
+                        {% if page.header.address %}
                             <dt>
-                                {% for line in grav.theme.config.contacts.location %}
+                                {% for line in page.header.address %}
                                     {{ line }}<br/>
                                 {% endfor %}
                             </dt>
                         {% endif %}
-                        {% for element in grav.theme.config.contacts.other %}
+                        {% for element in page.header.other %}
                             <dd><span class="{{ element.fa }}"><i class="fa fa-{{ element.fa }}"
                                                                     aria-hidden="true"></i></span>{{ element.content }}
                             </dd>
