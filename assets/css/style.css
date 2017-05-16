@@ -620,11 +620,14 @@ header.page5 .hover {
 }
 
 /****Map***/
-
+.col-1-4.map {
+    margin-top: 2.5px;
+}
 .map {
     text-align: left;
     overflow: hidden;
     padding-top: 5px;
+    height: 425px;
 }
 
 .map .text1 {

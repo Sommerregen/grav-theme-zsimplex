@@ -134,6 +134,7 @@
             </div>
         </div>
     </footer>
+
 {% endblock %}
 
 {% block body_js %}
@@ -154,7 +155,10 @@
     {% do assets.addJs('theme://assets/js/hyphenate.js', 104) %}
     {% do assets.addJs('theme://assets/js/tms-0.4.1.min.js', 101) %}
 
-
+    {% if  config.plugins.googlemaps.enabled %}
+        {% do assets.addJs('plugin://googlemaps/js/googlemaps.js', 105) %}
+        {% do assets.addJs('https://maps.googleapis.com/maps/api/js?key=' ~ config.plugins.googlemaps.google_api_key, 105) %}
+    {% endif %}
 
     {{ assets.js() }}
     <script>
@@ -167,7 +171,6 @@
         });
     </script>
 {% endblock %}
-
 
 </body>
 </html>
