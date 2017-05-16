@@ -4,16 +4,15 @@ enabled: true
 cdn: true
 
 # Logo URL
-logo_url: ""
+logo_url: "/user/images/logo.svg"
 
 # Favicon
-favicon_url: ""
+favicon_url: "/user/images/ts_favicon.png"
 
 # Language switcher in the footer on/off (you'll need the plugin..)
 language_switcher: true
 
-#Set your google api key here to enable the google map in contacts
-google_api_key: ''
+google_api_key: AIzaSyBmPSjHolBxkSSS4tnTdZIRTcIAWNXeYvg
 
 # Grav streams
 streams:
