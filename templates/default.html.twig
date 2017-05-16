@@ -155,8 +155,8 @@
     {% do assets.addJs('theme://assets/js/hyphenate.js', 104) %}
     {% do assets.addJs('theme://assets/js/tms-0.4.1.min.js', 101) %}
 
-    {% if  config.plugins.googlemaps.enabled and grav.theme.config.google_api_key %}
-        {% do assets.addJs('plugin://googlemaps/js/googlemaps.js', 105) %}
+    {% if  config.plugins.google-maps.enabled and grav.theme.config.google_api_key %}
+        {% do assets.addJs('plugin://google-maps/js/google-maps.js', 105) %}
         {% do assets.addJs('https://maps.googleapis.com/maps/api/js?key=' ~ grav.theme.config.google_api_key, 105) %}
     {% endif %}
 
