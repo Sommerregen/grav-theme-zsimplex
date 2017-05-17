@@ -11,14 +11,10 @@
                         {% if blog_image %}
                         <div class="flush-top jobs-header-image"
                              style="background-image: url({{ blog_image.url }});">{% endif %}
-                            <h3>{{ page.title }}</h3>
+                            <h2>{{ page.title }}</h2>
                             {% if blog_image %}</div>{% endif %}
                         <div class="text1">
                             {{ page.content }}
-                            <div class="text1 formhead">{{ page.header.form.contactstring }}</div>
-                            {% if config.plugins.form.enabled %}
-                                {% include "forms/form.html.twig" %}
-                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -27,4 +23,3 @@
     {% endblock %}
 
 {% endembed %}
-

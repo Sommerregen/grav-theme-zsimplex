@@ -32,8 +32,10 @@ img {
         height: 350px;
     }
 
-    .slider_wrapper h2 {
-        font-size: 40px;
+    .caption.banner h2 {
+        font-size: 35px !important;
+        line-height: normal;
+        margin-top: 0;
     }
 }
 
@@ -56,6 +58,7 @@ img {
     .map {
         height: 800px;
     }
+    
 }
 
 @media only screen and (max-width: 420px) {
@@ -80,7 +83,7 @@ img {
     }
 
     .caption.banner h2 {
-        font-size: medium;
+        font-size: 20px !important;
         line-height: normal;
         margin-top: 0;
     }

@@ -48,17 +48,17 @@ Styles the grav form in a material manner. No fancy effects though (easing etcpp
 }
 
 #contact > div.buttons > button:nth-child(1) {
-    background-color: #5383C6;
+    background-color: #3d78c0;
 }
 
 #contact > div.buttons > button:nth-child(1):hover, #contact > div.buttons > button:nth-child(2):hover {
-    background-color: #c2e8f4;
+    background-color: #3d78c0;
     border-color: #3c7f9f;
     color: #39596e;
 }
 
 #contact > div.buttons > button:nth-child(2) {
-    color: #5383C6;
+    color: #0063af;
 }
 
 html {
@@ -76,9 +76,9 @@ a[href^="tel:"] {
 
 body {
     font: 13px/19px Arial, Helvetica, sans-serif;
-    color: #ecedef;
+    color: #74777b;
     position: relative;
-    background: #334960;
+    background: #fff;
 }
 
 .ic {
@@ -321,7 +321,7 @@ header.page5 .men4 .hover {
 }
 
 #page2 {
-    background-color: #f17c72;
+    background-color: #3a8be0;
     padding-top: 230px;
     padding-bottom: 500px;
     padding-bottom: 190px;
@@ -361,11 +361,11 @@ header.page4 .hover {
 }
 
 #page5 {
-    background-color: #3f9fc9;
+    background-color: #0080a8;
 }
 
 header.page5 {
-    background-color: #3f9fc9;
+    background-color: #0080a8;
 }
 
 header.page5 .hover {
@@ -380,7 +380,8 @@ header.page5 .hover {
 }
 
 #page2 h3 span {
-    background-color: #2aae96;
+  color: #f1f2f4;
+    background-color: #009e82;
 }
 
 #page2 h3 span, #page2 h3 em {
@@ -485,7 +486,7 @@ header.page5 .hover {
 .socials1 {
     margin-top: 19px;
     padding-top: 24px;
-    border-top: 2px solid #2aae96;
+    border-top: 2px solid #009e82;
     text-align: center;
     font-size: 0;
     line-height: 0;
@@ -633,7 +634,7 @@ header.page5 .hover {
 .map .text1 {
     margin-bottom: 39px;
     color: #fff;
-    background-color: #2aae96;
+    background-color: #008864;
     display: inline;
     padding: 2px 5px;
 }
@@ -745,6 +746,7 @@ footer a:hover {
 #toTop span:before {
     opacity: 1 !important;
     position: absolute;
+    color: #74777b;
     /* padding-left: 20px; */
     font-family: FontAwesome;
     font-size: 52px;
@@ -773,7 +775,7 @@ jobs
     background-repeat: no-repeat;
 }
 
-.jobs-header-image h3 {
+.jobs-header-image h2 {
     top: 100%;
     position: relative;
     width: 100%;
@@ -812,7 +814,7 @@ jobs
 
 .jobs .text1.formhead {
     color: #fff;
-    background-color: #2aae96;
+    background-color: #009e82;
     display: inline;
     padding: 2px 5px;
     padding-top: 0;
