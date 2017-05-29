@@ -1,37 +1,18 @@
 enabled: true
 
+# Load resources from cdn
+cdn: true
+
 # Logo URL
-logo_url: ""
+logo_url: "/user/images/logo.svg"
 
 # Favicon
-favicon_url: ""
+favicon_url: "/user/images/ts_favicon.png"
 
-# Contacts
-contacts:
+# Language switcher in the footer on/off (you'll need the plugin..)
+language_switcher: true
 
-  # Location
-  location:
-    - "Via Romagnola"
-    - "524 - Roma Italy"
-
-  # Phone
-  phone:
-    freephone: "+1 800 559 6580"
-    telephone: "+1 800 603 6035"
-    fax: "+1 800 889 9898"
-
-  # Email
-  email: "mail@demolink.org"
-
-  # Skype (not include @)
-  skype: "skypename"
-
-# Social Links
-social_links:
-  facebook: "#"
-  twitter: "#"
-  gplus: "#"
-  linkedin: "#"
+google_api_key: AIzaSyBmPSjHolBxkSSS4tnTdZIRTcIAWNXeYvg
 
 # Grav streams
 streams:

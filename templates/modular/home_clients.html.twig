@@ -1,35 +1,45 @@
 {% set collection = page.collection() %}
 
 {% block body_content %}
-  <div class="col-full">
-    <div class="wrap-col">
-      <h3>{{ page.title }}</h3>
-    </div>
-  </div>
-
-  {% if collection | length %}
-    <div class="companies">
-
-      {% for item in collection %}
-        <div class="col-1-4">
-          <div class="wrap-col">
-            {% set image = item.media.images | first %}
-            <img src="{{ image.url }}" alt="{{ item.slug }}" />
-            <div class="text1">{{ item.title }}</div>
-
-            {{ item.content }}
-
-            {% if item.header.link %}
-              <a href="{{ item.header.link }}">Go to Site</a>
-            {% endif %}
-          </div>
+    <div class="col-full">
+        <div class="wrap-col">
+            <div class="slogan">
+                <h3>{{ page.title }}</h3>
+                <div class="text1">
+                    <p>{{ page.content }}</p>
+                </div>
+            </div>
         </div>
-
-        {% if loop.index is divisible by(4) %}
-          <div class="clear"></div>
-        {% endif %}
-      {% endfor %}
-
     </div>
-  {% endif %}
+
+    {% if collection | length %}
+        <div class="companies">
+
+            {% for item in collection %}
+                <div class="col-1-4">
+                    <div class="wrap-col">
+                        <div class="company_image">
+                            {% if item.media.files | first %}
+                                {% set image = item.media.files | first %}
+                            {% elseif item.media.images | first %}
+                                {% set image = item.media.images | first %}
+                            {% endif %}
+                            <img src="{{ image.url }}" alt="{{ item.slug }}"/>
+                        </div>
+                        <div class="text1">{{ item.title }}</div>
+                        {{ item.content }}
+                        {% if item.header.link %}
+                            <a href="{{ item.header.link }}">Go to Site <i class="fa fa-arrow-circle-o-right"
+                                                                           aria-hidden="true"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% if loop.index is divisible by(4) %}
+                    <div class="clear"></div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    {% endif %}
 {% endblock %}

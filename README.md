@@ -10,6 +10,12 @@ This theme is a [Grav](http://getgrav.org) port of the [zSimplex HTML Template](
 
 Installing this theme can be done in one of two ways. Our GPM (_Grav Package Manager_) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
+## Prerequisites
+
+- The Form in _contacts depends on the [Grav Plugin Form](https://github.com/getgrav/grav-plugin-form)
+- The Google-Map in _contacts depends on the [Grav Plugin Google Maps](https://github.com/deved-it/grav-plugin-google-maps)
+- The language-switcher in the footer relies on the [Grav Plugin Langswitcher](https://github.com/getgrav/grav-plugin-langswitcher)
+
 ## GPM Installation (_Preferred_)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (_also called the command line_).  From the root of your Grav install type:
