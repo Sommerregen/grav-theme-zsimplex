@@ -15,7 +15,7 @@
     <div class="map">
         <div class="col-1-4">
             <div class="wrap-col">
-                <div class="text1">{{ page.header.addressstring }}</div>
+                <div class="text1">{{ page.header.label.address }}</div>
                 <address>
                     <dl>
                         {% if page.header.address %}
@@ -26,29 +26,22 @@
                             </dt>
                         {% endif %}
                         {% for element in page.header.other %}
-                            <dd><span class="{{ element.fa }}"><i class="fa fa-{{ element.fa }}"
-                                                                  aria-hidden="true"></i></span>{{ element.content }}
+                            <dd><span class="{{ element.fa }}"><i class="fa fa-{{ element.fa }}" aria-hidden="true"></i></span>{{ element.content }}
                             </dd>
                         {% endfor %}
                     </dl>
                 </address>
             </div>
         </div>
-        <div class="col-1-4 map">
-            {% include 'partials/google-maps.html.twig' with {
-            width:'100%',
-            height: '100%',
-            lng: page.header.map.lng,
-            lat: page.header.map.lat,
-            zoom: '15',
-            scrollwheel: 'true',
-            draggable: '1',
-            pancontrol: '0',
-            } %}
+        {% set show_map = config.plugins['google-maps'].enabled ? true : false %}
+        <div class="{{ show_map ? 'col-1-2' : 'col-1-4' }} map">
+            {% if show_map %}
+                {% include 'partials/google-maps.html.twig' ignore missing with {width:'100%', height: '100%', lng: page.header.map.lng, lat: page.header.map.lat, zoom: '15', scrollwheel: 'true', draggable: '1', pancontrol: '0'} %}
+            {% endif %}
         </div>
-        <div class="col-1-2">
+        <div class="{{ show_map ? 'col-1-4 full' : 'col-1-2' }}">
             <div class="wrap-col">
-                <div class="text1">{{ page.header.title }}</div>
+                <div class="text1">{{ page.header.label.contact }}</div>
 
                 {% if config.plugins.form.enabled %}
                     {% include "forms/form.html.twig" %}

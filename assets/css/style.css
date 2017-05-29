@@ -61,6 +61,14 @@ Styles the grav form in a material manner. No fancy effects though (easing etcpp
     color: #0063af;
 }
 
+#contact .button {
+    margin-top: 10px;
+}
+
+div.full #contact .button {
+    width: calc(100% + 10px);
+}
+
 html {
     width: 100%;
 }
@@ -76,9 +84,9 @@ a[href^="tel:"] {
 
 body {
     font: 13px/19px Arial, Helvetica, sans-serif;
-    color: #74777b;
+    color: #ecedef;
     position: relative;
-    background: #fff;
+    background: #334960;
 }
 
 .ic {
@@ -321,7 +329,7 @@ header.page5 .men4 .hover {
 }
 
 #page2 {
-    background-color: #3a8be0;
+    background-color: #f17c72;
     padding-top: 230px;
     padding-bottom: 500px;
     padding-bottom: 190px;
@@ -402,12 +410,15 @@ header.page5 .hover {
 }
 
 .socials .fa {
-    color: #5383C6;
+    color: #ecedef;
     width: 40px;
-    font-size: 40px;
-    padding: 8px 10px;
+    font-size: 30px;
+    padding: 13px 10px;
     border-radius: 50%;
-    border: 2px solid #5383C6;
+    border: 2px solid #ecedef;
+}
+.socials a:hover {
+    opacity: 0.5;
 }
 
 .box.maxheight .socials1 .fa {
@@ -477,10 +488,18 @@ header.page5 .hover {
 
 .box .services .fa {
     width: 60px;
-    font-size: 60px;
-    padding: 28px 30px;
+    font-size: 50px;
+    padding: 35px 30px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
+    background-color: #334960;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+.box:hover .services .fa {
+    color: #ecedef;
+    opacity: 0.7;
 }
 
 .socials1 {
@@ -544,7 +563,7 @@ header.page5 .hover {
     -ms-hyphens: auto;
     hyphens: auto;
     text-overflow: ellipsis;
-    text-align: justify;
+    text-align: center;
     text-justify: inter-word;
 }
 
@@ -568,19 +587,7 @@ header.page5 .hover {
     margin-bottom: 108px;
 }
 
-.companies img {
-    max-width: 90%;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    max-height: 70%;
-}
-
-.companies .company_image {
-    background-color: #fff;
-    height: 90px;
-    position: relative;
+.company-image {
     filter: grayscale(80%);
 }
 
@@ -746,7 +753,7 @@ footer a:hover {
 #toTop span:before {
     opacity: 1 !important;
     position: absolute;
-    color: #74777b;
+    color: #ecedef;
     /* padding-left: 20px; */
     font-family: FontAwesome;
     font-size: 52px;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<html lang="{{ grav.language.getLanguage ?: theme_config.default_lang }}">
 <head>
     {% block head %}
         {% block head_meta %}
@@ -19,13 +19,16 @@
         {% endblock %}
 
         {% block head_title %}
-            <title>{% if page.header.title and (page.url != base_url or 'error' == page.template) %}{{ page.header.title }} | {% endif %}{{ site.title }}</title>
+            <title>{% if page.header.title and (page.url != base_url or 'error' == page.template) %}{{ page.header.title }}|{% endif %}{{ site.title }}</title>
         {% endblock %}
 
+        {% set favicon_url = 'theme://assets/images/favicon.ico' %}
+        {% if theme_config.favicon_url %}
+            {% set favicon_url = theme_config.favicon_url %}
+        {% endif %}
+
         <link rel="canonical" href="{{ page.url(true) }}"/>
-        <link rel="shortcut icon"
-              href="{{ theme_config.favicon_url | default(url('theme://assets/images/favicon.ico')) }}"
-              alt="{{ site.title | e('html_attr') }}"/>
+        <link rel="shortcut icon" href="{{ url(favicon_url) }}" alt="{{ site.title|e('html_attr') }}"/>
 
         {% block head_css %}
             {% if theme_config.cdn %}
@@ -64,6 +67,11 @@
 <body>{% endblock %}
 
 {% block body_header %}
+    {% set logo_url = 'theme://assets/images/logo.png' %}
+    {% if theme_config.logo_url %}
+        {% set logo_url = theme_config.logo_url %}
+    {% endif %}
+
     <header class="page1">
         <div class="zerogrid">
             <div class="col-full">
@@ -77,9 +85,7 @@
                                         {% if page.visible %}
                                             {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
                                             {% set page_num = loop.index + 1 %}
-                                            <li class="men{{ page_num }} {{ current_page }}"><a
-                                                        href="{{ page.url }}">{{ page.menu }}</a> <strong
-                                                        class="hover"></strong></li>
+                                            <li class="men{{ page_num }} {{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a> <strong class="hover"></strong></li>
                                         {% endif %}
                                     {% endfor %}
                                 {% endblock %}
@@ -90,9 +96,7 @@
                     </div>
 
                     {% block body_title %}
-                        <h1><a href="{{ base_url }}"><img
-                                        src="{{ theme_config.logo_url | default(url('theme://assets/images/logo.png')) }}"
-                                        alt="{{ site.title | e('html_attr') }}"/></a></h1>
+                        <h1><a href="{{ base_url }}"><img src="{{ url(logo_url) }}" alt="{{ site.title|e('html_attr') }}"/></a></h1>
                     {% endblock %}
                 </div>
             </div>
@@ -121,14 +125,12 @@
             <div class="col-full">
                 <div class="wrap-col">
                     <div class="copy">
-                        <a href="{{ base_url }}">{{ site.title }}</a> &copy; {{ "NOW" | date('Y') }}
+                        &copy; {{ "NOW"|date('Y') }} <a href="{{ base_url }}">{{ site.title }}</a>
                         {% for element in page.header.footer %}&emsp;|&emsp;<a
                                 href="{{ element.link }}">{{ element.name }}</a>&emsp;
                         {% endfor %}
                         </br>
-                        {% if grav.theme.config.language_switcher %}
-                            {% include 'langswitcher.html.twig' %}
-                        {% endif %}
+                        {% include 'partials/langswitcher.html.twig' ignore missing %}
                     </div>
                 </div>
             </div>
@@ -138,7 +140,7 @@
 {% endblock %}
 
 {% block body_js %}
-    {% do assets.addJs('jquery',110) %}
+    {% do assets.addJs('jquery', 110) %}
     {% if theme_config.cdn %}
         {% do assets.addJs('https://cdn.jsdelivr.net/jquery.uitotop/1.2/js/jquery.ui.totop.min.js', 101) %}
         {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.9/js/superfish.min.js', 102) %}
@@ -155,9 +157,10 @@
     {% do assets.addJs('theme://assets/js/hyphenate.js', 104) %}
     {% do assets.addJs('theme://assets/js/tms-0.4.1.min.js', 101) %}
 
-    {% if  grav.theme.config.google_api_key %}
+    {% set api_key = config.plugins['google-maps'].google_api_key %}
+    {% if config.plugins['google-maps'].enabled and api_key %}
         {% do assets.addJs('plugin://google-maps/js/google-maps.js', 105) %}
-        {% do assets.addJs('https://maps.googleapis.com/maps/api/js?key=' ~ grav.theme.config.google_api_key, 105) %}
+        {% do assets.addJs('https://maps.googleapis.com/maps/api/js?key=' ~ api_key, 105) %}
     {% endif %}
 
     {{ assets.js() }}

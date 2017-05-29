@@ -8,17 +8,12 @@
     {% for module in collection %}
         {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
         {% set module_num = loop.index %}
-        <li class="men{{ module_num == 1 ? '' : module_num - 1 }} {{ current_module }}"><a
-                    href="#{{ _self.pageLinkName(module.menu) }}"
-                    onClick="goToByScroll('page{{ module_num }}'); return false;">{{ module.menu }}</a> <strong
-                    class="hover"></strong></li>
+        <li class="men{{ module_num == 1 ? '' : module_num - 1 }} {{ current_module }}"><a href="#{{ _self.pageLinkName(module.menu) }}" onClick="goToByScroll('page{{ module_num }}'); return false;">{{ module.menu }}</a> <strong class="hover"></strong></li>
     {% endfor %}
 {% endblock %}
 
 {% block body_title %}
-    <h1><a href="{{ base_url }}" onClick="goToByScroll('page1'); return false;"><img
-                    src="{{ theme_config.logo_url | default(url('theme://assets/images/logo.png')) }}"
-                    alt="{{ site.title | e('html_attr') }}"/></a></h1>
+    <h1><a href="{{ base_url }}" onClick="goToByScroll('page1'); return false;"><img src="{{ theme_config.logo_url|default(url('theme://assets/images/logo.png')) }}" alt="{{ site.title|e('html_attr') }}"/></a></h1>
 {% endblock %}
 
 {% block body_content %}

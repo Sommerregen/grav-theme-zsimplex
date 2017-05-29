@@ -1,23 +1,7 @@
-enabled: true
+# Global theme configurations
+enabled: true             # Set to false to disable this plugin completely
 
-# Load resources from cdn
-cdn: true
+cdn: false                # Load resources from CDN
 
-# Logo URL
-logo_url: "/user/images/logo.svg"
-
-# Favicon
-favicon_url: "/user/images/ts_favicon.png"
-
-# Language switcher in the footer on/off (you'll need the plugin..)
-language_switcher: true
-
-google_api_key: AIzaSyBmPSjHolBxkSSS4tnTdZIRTcIAWNXeYvg
-
-# Grav streams
-streams:
-  schemes:
-    theme:
-      type: ReadOnlyStream
-      paths:
-        - user/themes/zsimplex
+logo_url: ""              # Logo URL, i.e., "/user/images/logo.svg"
+favicon_url: ""           # Favicon, i.e., "/user/images/ts_favicon.png"
