@@ -1,42 +1,7 @@
-enabled: true
+# Global theme configurations
+enabled: true             # Set to false to disable this plugin completely
 
-# Logo URL
-logo_url: ""
+cdn: false                # Load resources from CDN
 
-# Favicon
-favicon_url: ""
-
-# Contacts
-contacts:
-
-  # Location
-  location:
-    - "Via Romagnola"
-    - "524 - Roma Italy"
-
-  # Phone
-  phone:
-    freephone: "+1 800 559 6580"
-    telephone: "+1 800 603 6035"
-    fax: "+1 800 889 9898"
-
-  # Email
-  email: "mail@demolink.org"
-
-  # Skype (not include @)
-  skype: "skypename"
-
-# Social Links
-social_links:
-  facebook: "#"
-  twitter: "#"
-  gplus: "#"
-  linkedin: "#"
-
-# Grav streams
-streams:
-  schemes:
-    theme:
-      type: ReadOnlyStream
-      paths:
-        - user/themes/zsimplex
+logo_url: ""              # Logo URL, i.e., "/user/images/logo.svg"
+favicon_url: ""           # Favicon, i.e., "/user/images/ts_favicon.png"

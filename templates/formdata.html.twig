@@ -1,0 +1,18 @@
+{% extends 'default.html.twig' %}
+
+{% block body_content %}
+    <div id="{{ page.slug }}" class="content">
+        <div class="zerogrid">
+            <div class="col-full">
+                <div class="wrap-col">
+                    <h3>{{ page.title }}</h3>
+                    <div class="text1">{{ page.content }}</div>
+                    <div class="alert">{{ form.message }}</div>
+                    <p>Here is the summary of what you wrote to us:</p>
+
+                    {% include "forms/data.html.twig" %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

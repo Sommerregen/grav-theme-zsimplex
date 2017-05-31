@@ -5,25 +5,25 @@
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
 
 {% block body_nav %}
-  {% for module in collection %}
-    {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
-    {% set module_num = loop.index %}
-    <li class="men{{ module_num == 1 ? '' : module_num - 1 }} {{ current_module}}"><a href="#{{ _self.pageLinkName(module.menu) }}" onClick="goToByScroll('page{{ module_num }}'); return false;">{{ module.menu }}</a> <strong class="hover"></strong></li>
-  {% endfor %}
+    {% for module in collection %}
+        {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
+        {% set module_num = loop.index %}
+        <li class="men{{ module_num == 1 ? '' : module_num - 1 }} {{ current_module }}"><a href="#{{ _self.pageLinkName(module.menu) }}" onClick="goToByScroll('page{{ module_num }}'); return false;">{{ module.menu }}</a> <strong class="hover"></strong></li>
+    {% endfor %}
 {% endblock %}
 
 {% block body_title %}
-  <h1><a href="{{ base_url }}" onClick="goToByScroll('page1'); return false;"><img src="{{ theme_config.logo_url | default(url('theme://assets/images/logo.png')) }}" alt="{{ site.title | e('html_attr') }}" /></a></h1>
+    <h1><a href="{{ base_url }}" onClick="goToByScroll('page1'); return false;"><img src="{{ theme_config.logo_url|default(url('theme://assets/images/logo.png')) }}" alt="{{ site.title|e('html_attr') }}"/></a></h1>
 {% endblock %}
 
 {% block body_content %}
-  {% for module in collection %}
-    <div id="page{{ loop.index }}" class="content">
-      <div class="zerogrid">
-        {{ module.content }}
-      </div>
-    </div>
-  {% endfor %}
+    {% for module in collection %}
+        <div id="page{{ loop.index }}" class="content">
+            <div class="zerogrid">
+                {{ module.content }}
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}
 
 {% block body_copyright %}
@@ -31,51 +31,51 @@
 {% endblock %}
 
 {% block body_js %}
-  {{ parent() }}
+    {{ parent() }}
 
-  <script>
-    $(document).ready(function(){
-      $('.slider_wrapper')._TMS({
-        show:0,
-        pauseOnHover:false,
-        prevBu:'.prev',
-        nextBu:'.next',
-        playBu:false,
-        duration:800,
-        preset:'fade',
-        pagination:true,//'.pagination',true,'<ul></ul>'
-        pagNums:false,
-        slideshow:8000,
-        numStatus:false,
-        banners: 'fade',
-        waitBannerAnimation:false,
-        progressBar:false
-      });
-    });
+    <script>
+        $(document).ready(function () {
+            $('.slider_wrapper')._TMS({
+                show: 0,
+                pauseOnHover: false,
+                prevBu: '.prev',
+                nextBu: '.next',
+                playBu: false,
+                duration: 800,
+                preset: 'fade',
+                pagination: true,//'.pagination',true,'<ul></ul>'
+                pagNums: false,
+                slideshow: 8000,
+                numStatus: false,
+                banners: 'fade',
+                waitBannerAnimation: false,
+                progressBar: false
+            });
+        });
 
-    $(document).ready(function(){
-      !function(){
-        var map=[]
-        ,names=[]
-        ,win=$(window)
-        ,header=$('header')
-        ,currClass
+        $(document).ready(function () {
+            !function () {
+                var map = []
+                    , names = []
+                    , win = $(window)
+                    , header = $('header')
+                    , currClass
 
-        $('.content').each(function(n){
-          map[n]=this.offsetTop
-          names[n]=$(this).attr('id')
-        })
+                $('.content').each(function (n) {
+                    map[n] = this.offsetTop
+                    names[n] = $(this).attr('id')
+                })
 
-        win
-        .on('scroll',function(){
-          var i=0
-          while(map[i++]<=win.scrollTop());
-          if(currClass!==names[i-2])
-            currClass=names[i-2]
+                win
+                    .on('scroll', function () {
+                        var i = 0
+                        while (map[i++] <= win.scrollTop());
+                        if (currClass !== names[i - 2])
+                            currClass = names[i - 2]
 
-            header.removeAttr("class").addClass(names[i-2])
-        })
-      }();
-    });
-  </script>
+                        header.removeAttr("class").addClass(names[i - 2])
+                    })
+            }();
+        });
+    </script>
 {% endblock %}
