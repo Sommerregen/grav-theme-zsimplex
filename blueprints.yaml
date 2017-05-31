@@ -15,3 +15,36 @@ license: "MIT/GPL"
 form:
   validation: strict
   fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      help: THEMES.ZSIMPLEX.PLUGIN_STATUS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    cdn:
+      type: toggle
+      label: THEMES.ZSIMPLEX.CDN
+      help: THEMES.ZSIMPLEX.CDN_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+
+    logo_url:
+      type: text
+      label: THEMES.ZSIMPLEX.LOGO_URL
+      placeholder: THEMES.ZSIMPLEX.LOGO_URL_PLACEHOLDER
+
+    favicon_url:
+      type: text
+      label: THEMES.ZSIMPLEX.FAVICON_URL
+      placeholder: THEMES.ZSIMPLEX.FAVICON_URL_PLACEHOLDER
