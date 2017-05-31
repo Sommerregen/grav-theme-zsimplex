@@ -1,3 +1,15 @@
+# v2.2.0
+## 05/31/2017
+
+1. [](#new)
+  * Added theme blueprints and languages
+2. [](#improved)
+  * Overall updates and junk removal [#4](https://github.com/Sommerregen/grav-theme-zsimplex/pull/4) (Big thanks to [@boredland](https://github.com/boredland))
+  * Use `fontawesome` instead of images wherever possible
+  * Make a lot of options editable on page level
+  * Integration of the current Grav forms
+  * Updated libraries
+
 # v2.1.0
 ## 05/13/2017
 
