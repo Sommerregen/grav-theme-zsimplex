@@ -126,8 +126,14 @@
                 <div class="wrap-col">
                     <div class="copy">
                         &copy; {{ "NOW"|date('Y') }} <a href="{{ base_url }}">{{ site.title }}</a>
-                        {% for element in page.header.footer %}&emsp;|&emsp;<a
-                                href="{{ element.link }}">{{ element.name }}</a>&emsp;
+                        {% for element in page.header.footer %}
+                            {# Check for registered page #}
+                            {% set p = grav.pages.find(element.link) %}
+                            {% if p %}
+                                &emsp;|&emsp;<a href="{{ p.url }}">{{ element.name }}</a>&emsp;
+                            {% else %}
+                                &emsp;|&emsp;<a href="{{ element.link }}">{{ element.name }}</a>&emsp;
+                            {% endif %}
                         {% endfor %}
                         </br>
                         {% include 'partials/langswitcher.html.twig' ignore missing %}
