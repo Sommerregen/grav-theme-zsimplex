@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: theme_config.default_lang }}">
+<html lang="{{ grav.language.getLanguage ?: (theme_config.default_lang|default('en')) }}">
 <head>
     {% block head %}
         {% block head_meta %}
