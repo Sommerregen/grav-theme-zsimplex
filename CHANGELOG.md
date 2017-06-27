@@ -1,6 +1,14 @@
 # v2.2.0
 ## 05/31/2017
 
+2. [](#improved)
+  * Removed language suffixes in demo content
+3. [](#bugfix)
+  * Fixed installation issues [#5](https://github.com/Sommerregen/grav-theme-zsimplex/issues/5) and make sure that a language is always set
+
+# v2.2.0
+## 05/31/2017
+
 1. [](#new)
   * Added theme blueprints and languages
 2. [](#improved)
